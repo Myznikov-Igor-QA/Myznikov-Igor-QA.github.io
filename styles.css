@@ -1,0 +1,276 @@
+/* Переменные */
+:root  {
+    --color-green:rgb(154, 255, 154);
+    --background-black-opacity:rgb(0, 0, 0, 50%);
+}
+
+/* Общие стили */
+a {
+    color:var(--color-green);
+    text-decoration: none;
+    transition: opacity .25s ease;
+}
+a:hover {
+    opacity: .7;
+}
+
+.blook-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.header {
+height: 100vh;
+background: url(./images/it.jpg) no-repeat center;
+background-size: cover;
+clip-path: polygon(100% 0, 100% 90%, 49% 100%, 0 91%, 0 0);
+}
+.header-top a.link {
+    color: #ffffff;
+}
+
+.header-top a.link.active, .header-top a.link:hover:not(.logo) {
+    color:var(--color-green) ;
+}
+
+
+
+.header-top {
+    position: sticky;
+    top: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 45px;
+     color: #ffffff;
+     background: rgb(0 0 0 / 25%);
+     z-index: 3;
+
+}
+.header-backgraund {
+position: absolute;
+height: inherit;
+width: 100%;
+background: 0 0 0.5;
+z-index: 1;
+}
+.logo {
+    width: 268px;
+    font-size: 36px;
+    white-space: nowrap;
+    color:rgb(250, 250, 250);
+   
+}
+
+
+.menu-element {
+    margin-right: 30px;
+    font-size: 20px;
+}
+.menu-element:last-child {
+    margin-right: 0;  
+}
+
+.menu-element a.link.active, .menu-element a.link:hover {
+    color:var(--color-green)
+}
+
+.menu-element__link.home svg {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+}
+
+.header-center {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background: rgb(0 0 0 / 25%);
+    color: #ffffff;
+}
+
+
+
+body {
+    font-size: 17px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.second-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.abount-me__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.name {
+font-size: 39px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-color: transparent
+}
+.description {
+    font-size: 20px;
+    font-family: Courier, monospace;
+    padding: 5px 10px;
+    width: 39ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    overflow: hidden;
+    animation: cursor 0.75s 8, print-text 5s steps(39);
+    font-family: system-ui;
+   }
+
+   
+   @keyframes cursor {
+        0% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #ffffff;
+        }
+        100% {
+            border-color: transparent;
+        }
+   }
+
+   @keyframes print-text {
+    from {
+        width: 0;
+    }
+   }
+
+   /* Секция обо мне */
+
+   .card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 1534px;
+    width: 100%;
+}
+.card img {
+    
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    
+}
+.description {
+    flex: 1;
+}
+.description h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #0096c5a3;
+}
+.description p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+    line-height: 1.5;
+    font-family: emoji;
+}
+
+
+   
+.skills {
+    margin-top: 40px;
+}
+.skills h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #0096c5a3;
+}
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.skill-tile {
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.skill-tile:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.05);
+}
+@media (max-width: 600px) {
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-tile {
+        width: 80%;
+    }
+}
+
+   
+    .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 8;
+    }
+    
+    .socials {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-block: 5px;
+       }
+    
+       .socials-element {
+           
+      
+        display: inline-block; 
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+       }
+
+       .footer-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+   }
+
+  
